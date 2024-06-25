@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './styles/index.css';
-import Landing from './routes/landing';
+import Landing from './landing';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(
