@@ -36,8 +36,9 @@ const HomeButton = styled(Link)`
   margin-top: 20px;
   padding: 10px 20px;
   color: #4e4e4e;
-  background: #fff;
-  border-radius: 5px;
+  background: #f1f1f1;
+  outline: 0.1px solid #4e4e4e;
+  border-radius: 12px;
   text-decoration: none;
   font-weight: bold;
   &:hover {
