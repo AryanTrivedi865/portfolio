@@ -1,15 +1,19 @@
-import { BrowserRouter as Router, Route, Routes, useLocation } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 import "./styles/app.css"
+import Home from "./screen/home";
+import Navbar from "./components/navbar";
 
 function Layout() {
 
   const location = useLocation();
-
   const navbarPath = ["/home", "/", "/about", "/contacts", "/signup"];
 
   return (
     <div className="parent">
-        <Routes/>
+        {navbarPath.includes(location.pathname) && <Navbar/>}
+        <Routes>
+          <Route path="/" element={<Home />} />
+        </Routes>
     </div>
   );
 }
