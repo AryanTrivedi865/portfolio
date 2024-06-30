@@ -1,4 +1,6 @@
+/* General Styling */
 .navbar {
+    position: relative;
     width: 100vw;
     height: 10vh;
     color: #1e1e1e;
@@ -17,6 +19,7 @@
 }
 
 .navbar__logo {
+    display: block;
     cursor: default;
     font-family: "Saira Extra Condensed";
     font-size: 1.8rem;
@@ -28,11 +31,13 @@
     transform: translateX(-50%);
     display: flex;
     justify-content: center;
-    flex-grow: 1;
+    align-items: center;
+    flex-grow: 1; /* Ensures links take remaining space */
 }
 
 .navbar__links a {
     margin: 0 12px;
+    position: relative;
 }
 
 .navbar__contact {
@@ -62,7 +67,8 @@
     display: none;
     position: absolute;
     top: 100%;
-    left: 0;
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%);
     background-color: white;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 0 0 12px 12px;
@@ -114,6 +120,44 @@
     display: none;
 }
 
+.navbar__hamburger {
+    display: none;
+}
+
+.navbar__hamburger__menu {
+    position: absolute;
+    top: 10vh; /* Adjust as needed */
+    right: 24px; /* Adjust as needed */
+    background-color: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    padding: 8px;
+    z-index: 10;
+    display: none;
+}
+
+.navbar__hamburger__menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar__hamburger__menu ul li {
+    margin-bottom: 8px;
+}
+
+.navbar__hamburger__menu ul li a {
+    color: #1e1e1e;
+    text-decoration: none;
+    padding: 8px 16px;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+.navbar__hamburger__menu ul li a:hover {
+    background-color: #f0f0f0;
+}
+
 @media screen and (max-width: 1080px) {
     .logo {
         display: none;
@@ -139,4 +183,22 @@
 .navbar__links a:hover::after {
     width: 100%;
     right: 0;
+}
+
+@media screen and (max-width: 768px) {
+    .navbar__links {
+        display: none;
+    }
+
+    .navbar__hamburger {
+        display: block;
+    }
+
+    .navbar__contact {
+        display: none;
+    }
+
+    .navbar__hamburger__menu {
+        display: block;
+    }
 }
