@@ -6,7 +6,7 @@ import Navbar from "./components/navbar";
 function Layout() {
 
   const location = useLocation();
-  const navbarPath = ["/home", "/", "/about", "/contacts", "/signup"];
+  const navbarPath = ["/home", "/", "/about", "/contact", "/signup"];
 
   return (
     <div className="parent">
