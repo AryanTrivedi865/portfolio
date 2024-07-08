@@ -1,11 +1,10 @@
 import { Link } from "react-router-dom";
-import "@fortawesome/fontawesome-free/css/all.min.css";
 import "./../styles/navbar.css";
 import Hamburger from "hamburger-react";
 import { useState } from "react";
 
 function Navbar() {
-  const [isOpen, setOpen] = useState<boolean>(false);
+  const [isOpen, setOpen] = useState(false);
 
   const socialLinks = [
     { name: "Github", url: "https://www.github.com/aryantrivedi865" },
@@ -27,7 +26,7 @@ function Navbar() {
       </div>
       <div className="navbar__links">
         <Link to="/about">ABOUT</Link>
-        <Link to="/contact">WORK</Link>
+        <Link to="/work">WORK</Link>
       </div>
       <div className="navbar__contact">
         <button>LET'S CONNECT</button>
@@ -45,24 +44,21 @@ function Navbar() {
         </div>
       </div>
       <div className="navbar__hamburger">
-        <Hamburger
-          toggled={isOpen}
-          toggle={() => setOpen((prev) => !prev)}
-          size={20}
-        />
-        <div
-          className="navbar__hamburger__menu"
-          style={{ display: isOpen ? "block" : "none" }}
-        >
+        <Hamburger toggled={isOpen} toggle={() => setOpen(!isOpen)} size={20} />
+        <div className={`navbar__hamburger__menu ${isOpen ? "open" : ""}`}>
           <ul>
-            {socialLinks.map((link, index) => (
-              <li key={index}>
-                <a href={link.url} target="_blank" rel="noopener noreferrer">
-                  <i className={`fab fa-${link.name.toLowerCase()}`}></i>
-                  {link.name}
-                </a>
-              </li>
-            ))}
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/about">About</Link>
+            </li>
+            <li>
+              <Link to="/work">Work</Link>
+            </li>
+            <li>
+              <Link to="/contacts">Contact Me</Link>
+            </li>
           </ul>
         </div>
       </div>

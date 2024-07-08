@@ -8,6 +8,7 @@ body {
   overflow: hidden;
   font-family: 'Fredoka';
   user-select: none;
+  -webkit-user-select: none;
 }
 
 code {
