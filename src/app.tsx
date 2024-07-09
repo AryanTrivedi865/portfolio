@@ -1,11 +1,11 @@
-import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, useLocation, BrowserRouter } from "react-router-dom";
 import "./styles/app.css"
 import Home from "./screen/home";
 import Page404 from "./screen/page404";
 import Navbar from "./components/navbar";
 
 function Layout() {
-
+  
   const location = useLocation();
   const navbarPath = ["/home", "/", "/about", "/contact", "/signup"];
 
@@ -29,7 +29,7 @@ function Layout() {
 
 function App() {
   return (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
       <Layout />
     </Router>
   );
