@@ -7,8 +7,13 @@ body {
   -moz-osx-font-smoothing: grayscale;
   overflow: hidden;
   font-family: 'Fredoka';
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   user-select: none;
-  -webkit-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
 }
 
 code {
