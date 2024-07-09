@@ -6,6 +6,10 @@ import { useState } from "react";
 function Navbar() {
   const [isOpen, setOpen] = useState(false);
 
+  const handleClick = () => {
+    setOpen(false);
+  };
+
   const socialLinks = [
     { name: "Github", url: "https://www.github.com/aryantrivedi865" },
     { name: "Twitter", url: "https://www.twitter.com" },
@@ -48,16 +52,16 @@ function Navbar() {
         <div className={`navbar__hamburger__menu ${isOpen ? "open" : ""}`}>
           <ul>
             <li>
-              <Link to="/">Home</Link>
+              <Link to="/" onClick={handleClick}>Home</Link>
             </li>
             <li>
-              <Link to="/about">About</Link>
+              <Link to="/about" onClick={handleClick}>About</Link>
             </li>
             <li>
-              <Link to="/work">Work</Link>
+              <Link to="/work" onClick={handleClick}>Work</Link>
             </li>
             <li>
-              <Link to="/contacts">Contact Me</Link>
+              <Link to="/contacts" onClick={handleClick}>Contact Me</Link>
             </li>
           </ul>
         </div>
