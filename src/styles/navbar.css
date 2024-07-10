@@ -79,10 +79,6 @@
     transition: transform 0.3s ease, box-shadow 0.3s ease,outline 0.3s ease;
 }
 
-.navbar__contact button:hover {
-    outline: whitesmoke solid 1px;
-}
-
 .navbar__contact button:before {
     content: "";
     background: linear-gradient(

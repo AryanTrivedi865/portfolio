@@ -23,7 +23,9 @@ function Navbar() {
         <Link to="/work">WORK</Link>
       </div>
       <div className="navbar__contact">
-        <button>LET'S CONNECT</button>
+        <Link to="/contacts">
+          <button>LET'S CONNECT</button>
+        </Link>
       </div>
       <div className="navbar__hamburger">
         <Hamburger toggled={isOpen} toggle={() => setOpen(!isOpen)} size={20} />
