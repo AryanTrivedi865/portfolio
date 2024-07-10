@@ -39,6 +39,22 @@
     margin: 0 12px;
 }
 
+.navbar__links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0.5px;
+    display: block;
+    margin-top: 5px;
+    right: 0;
+    background: #1e1e1e;
+    transition: width 0.3s ease;
+}
+
+.navbar__links a:hover::after {
+    width: 100%;
+}
+
 .navbar__contact {
     display: flex;
     align-items: center;
@@ -53,59 +69,11 @@
     font-family: "Fredoka";
     font-size: 1rem;
     cursor: pointer;
-    transition: border-radius 0.3s ease;
+    transition: background-color 0.3s ease;
 }
 
-.navbar__contact:hover button {
-    border-radius: 12px 12px 0 0;
-}
-
-.navbar__contact__social {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 0 0 12px 12px;
-    padding: 8px;
-    z-index: 10;
-    flex-direction: column;
-}
-
-.navbar__contact__social ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.navbar__contact__social ul li {
-    display: flex;
-    align-items: center;
-    margin: 5px 0;
-}
-
-.navbar__contact__social ul li a {
-    color: #9f8d8d;
-    font-size: 1rem;
-    padding: 5px 0;
-    display: block;
-}
-
-.navbar__contact__social ul li a:hover {
-    color: #500c26;
-}
-
-.navbar__contact__social ul li i {
-    margin-right: 8px;
-}
-
-.navbar__contact:hover .navbar__contact__social,
-.navbar__contact__social:hover {
-    display: flex;
-    justify-content: space-between;
-    width: 90%;
+.navbar__contact button:hover {
+    background-color: #a00f35;
 }
 
 .logo {
@@ -177,22 +145,6 @@
     .short-logo {
         display: block;
     }
-}
-
-.navbar__links a::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 0.5px;
-    display: block;
-    margin-top: 5px;
-    right: 0;
-    background: #1e1e1e;
-    transition: width 0.3s ease;
-}
-
-.navbar__links a:hover::after {
-    width: 100%;
 }
 
 @media screen and (max-width: 768px) {

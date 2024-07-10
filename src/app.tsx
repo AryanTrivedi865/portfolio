@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route, useLocation, BrowserRouter } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, useLocation} from "react-router-dom";
 import "./styles/app.css"
 import Home from "./screen/home";
 import Page404 from "./screen/page404";
