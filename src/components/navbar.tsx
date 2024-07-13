@@ -24,7 +24,7 @@ function Navbar() {
       </div>
       <div className="navbar__contact">
         <Link to="/contacts">
-          <button>LET'S CONNECT</button>
+          <button>Get in Touch</button>
         </Link>
       </div>
       <div className="navbar__hamburger">

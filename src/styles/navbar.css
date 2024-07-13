@@ -99,7 +99,7 @@
     height: calc(100% + 4px);
     transition: opacity 0.3s ease-in-out, background-size 0.3s ease;
     opacity: 0;
-    border-radius: 10px;
+    border-radius: 12px;
 }
 
 .navbar__contact button:after {
@@ -111,7 +111,7 @@
     background: #740f35;
     left: 0;
     top: 0;
-    border-radius: 10px;
+    border-radius: 12px;
 }
 
 .navbar__contact button:hover:before {
